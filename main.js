@@ -236,26 +236,7 @@
     }
   };
 
-  /* ---------- Preloader ---------- */
-  const count = document.querySelector("[data-count]");
-  const finish = () => {
-    root.classList.add("is-loaded");
-    startReveals();
-    initMotion();
-  };
-  if (reduce || !count) { finish(); return; }
-  const t0 = performance.now();
-  let loaded = document.readyState === "complete";
-  window.addEventListener("load", () => { loaded = true; });
-  const MIN = 1200;
-  const step = (t) => {
-    const k = Math.min(1, (t - t0) / MIN);
-    const target = loaded ? 100 : 90;
-    const value = Math.round(target * (1 - Math.pow(1 - k, 3)));
-    count.textContent = value;
-    if (k < 1 || !loaded) requestAnimationFrame(step);
-    else { count.textContent = 100; setTimeout(finish, 120); }
-  };
-  requestAnimationFrame(step);
-  setTimeout(() => { if (!root.classList.contains("is-loaded")) { loaded = true; } }, 5000);
+  /* ---------- Start ---------- */
+  startReveals();
+  initMotion();
 })();
