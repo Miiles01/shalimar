@@ -1,0 +1,625 @@
+// Generated from _source/menu.json (transcribed from shalimarmeal.com/menu).
+window.SHALIMAR_MENU = [
+ {
+  "id": "soups",
+  "name": "Soups",
+  "photo": "assets/img/gosht.jpg",
+  "items": [
+   {
+    "name": "Lemon Coriander Soup",
+    "desc": "Clear soup made with mixed vegetables, lemon and coriander leaves",
+    "prices": {
+     "Chicken": 12,
+     "Veg": 10
+    },
+    "kcal": 87
+   },
+   {
+    "name": "Sweet Corn Soup",
+    "desc": "An Indo-Chinese style soup made with veggies, sweet corn kernels and pepper",
+    "prices": {
+     "Chicken": 10,
+     "Veg": 9
+    },
+    "kcal": 86
+   },
+   {
+    "name": "Hot & Sour Soup",
+    "desc": "Filled with mushrooms, veggies and silky egg ribbons, thickened with cornstarch",
+    "prices": {
+     "Chicken": 10,
+     "Veg": 9
+    },
+    "kcal": 90
+   },
+   {
+    "name": "Lemon Pepper Soup",
+    "desc": "Clear soup made with mixed vegetables, lemon and a hint of pepper",
+    "prices": {
+     "Chicken": 12,
+     "Veg": 10
+    },
+    "kcal": 107
+   },
+   {
+    "name": "Sea Food Soup",
+    "desc": "Fish and loads of chopped veggies thickened with corn and broth",
+    "price": 12,
+    "kcal": 204
+   },
+   {
+    "name": "Manchow Soup",
+    "desc": "Dark brownish soup made with assorted vegetables, fried noodles and poultry, thickened with corn and broth",
+    "prices": {
+     "Chicken": 10,
+     "Veg": 9
+    },
+    "kcal": 129
+   }
+  ]
+ },
+ {
+  "id": "chinese-rice",
+  "name": "Chinese rice",
+  "photo": "assets/img/chinese-rice.jpg",
+  "items": [
+   {
+    "name": "Fried Rice",
+    "desc": "Rice stir-fried with sauces, veggies and eggs",
+    "prices": {
+     "Chicken": 18,
+     "Meat": 25,
+     "Prawns": 28,
+     "Mixed": 28
+    },
+    "kcal": 655
+   },
+   {
+    "name": "Chicken Manchurian",
+    "desc": "Thick corn flour based gravy with soy sauce and other spices",
+    "price": 20,
+    "kcal": 560
+   },
+   {
+    "name": "Chicken Chilli",
+    "desc": "Batter-fried boneless chicken chunks tossed in a mixture of vegetables and spicy sauces",
+    "price": 20,
+    "kcal": 450
+   },
+   {
+    "name": "1000 Rice",
+    "desc": "A generous Indo-Chinese rice combo, served with Schezwan lollipop",
+    "price": 35,
+    "kcal": 860
+   },
+   {
+    "name": "Chicken Schezwan",
+    "desc": "Deep-fried boneless chicken chunks in Schezwan gravy",
+    "price": 22,
+    "kcal": 470
+   },
+   {
+    "name": "Schezwan Rice",
+    "desc": "Hot and spicy, bursting with flavours of ginger, garlic, soya sauce and red chilli paste",
+    "prices": {
+     "Chicken": 20,
+     "Meat": 27,
+     "Prawns": 30,
+     "Mixed": 30
+    },
+    "kcal": 570
+   }
+  ]
+ },
+ {
+  "id": "noodles",
+  "name": "Noodles",
+  "photo": "assets/img/noodles.jpg",
+  "items": [
+   {
+    "name": "Chicken Triple Rice",
+    "desc": "Stir-fried long grain rice and noodles in Schezwan sauce, served with gravy",
+    "price": 28,
+    "kcal": 741
+   },
+   {
+    "name": "Noodles",
+    "desc": "Noodles stir-fried with sauces, veggies and eggs",
+    "prices": {
+     "Chicken": 20,
+     "Meat": 27,
+     "Prawns": 30,
+     "Mixed": 30
+    },
+    "kcal": 360
+   },
+   {
+    "name": "Schezwan Noodles",
+    "desc": "Hot and spicy, bursting with flavours of ginger, garlic, soya sauce and red chilli paste",
+    "prices": {
+     "Chicken": 22,
+     "Meat": 29,
+     "Prawns": 32,
+     "Mixed": 32
+    },
+    "kcal": 604
+   },
+   {
+    "name": "Chicken Manchurian Rice",
+    "desc": "Fried rice and Manchurian gravy combo",
+    "price": 25,
+    "kcal": 584
+   }
+  ]
+ },
+ {
+  "id": "tandoor",
+  "name": "Tandoor",
+  "photo": "assets/img/tandoor.jpg",
+  "items": [
+   {
+    "name": "Tandoori Murg",
+    "desc": "Chicken marinated in yogurt and spices, cooked in the tandoor",
+    "prices": {
+     "Quarter": 10,
+     "Half": 20,
+     "Full": 38
+    },
+    "kcal": 684
+   },
+   {
+    "name": "Shalimar Platter",
+    "desc": "Combo of tandoori chicken, chicken tikka, kalimiri murg, ludhiyani murg, kasturi kabab and seekh kabab",
+    "price": 65,
+    "kcal": 890,
+    "signature": true
+   },
+   {
+    "name": "Ludhiyani Murgh",
+    "desc": "Chicken chunks marinated in yogurt and spices, then grilled",
+    "price": 24,
+    "kcal": 512
+   },
+   {
+    "name": "Malai Murgh",
+    "desc": "Grilled chicken chunks marinated in yogurt, black pepper and other spices",
+    "price": 25,
+    "kcal": 477
+   },
+   {
+    "name": "Prawns Tikka",
+    "desc": "Prawns roasted on skewers in a tandoor oven",
+    "price": 40,
+    "kcal": 587
+   },
+   {
+    "name": "Tandoori Wings",
+    "desc": "Chicken winglets marinated in yogurt and special spices, roasted in the tandoor",
+    "price": 18,
+    "kcal": 651
+   },
+   {
+    "name": "Kasturi Tikka",
+    "desc": "Boneless chicken thighs marinated in yogurt and special spices, then grilled",
+    "price": 25,
+    "kcal": 498
+   },
+   {
+    "name": "Seekh Kabab",
+    "desc": "Spiced minced chicken or mutton formed into cylinders on skewers and grilled",
+    "prices": {
+     "Chicken": 24,
+     "Meat": 28
+    },
+    "kcal": 480
+   }
+  ]
+ },
+ {
+  "id": "biryani",
+  "name": "Biryani & rice",
+  "photo": "assets/img/biryani-plate.jpg",
+  "items": [
+   {
+    "name": "Biryani",
+    "desc": "Highly seasoned basmati rice, meat and aromatics steamed together",
+    "prices": {
+     "Veg": 15,
+     "Chicken": 18,
+     "Meat": 22,
+     "Prawns": 28
+    },
+    "kcal": 600,
+    "signature": true
+   },
+   {
+    "name": "Chicken Tikka Biryani",
+    "desc": "A fusion of long grain basmati rice and boneless chicken tikka",
+    "price": 25,
+    "kcal": 640
+   },
+   {
+    "name": "Chicken Tikka Pulao",
+    "desc": "Basmati rice, chicken tikka, a few veggies, herbs, yogurt and spices",
+    "price": 25,
+    "kcal": 580
+   },
+   {
+    "name": "Pulao",
+    "desc": "Basmati rice flavoured with spices and cooked in stock, with meat or chicken",
+    "prices": {
+     "Veg": 18,
+     "Chicken": 20,
+     "Meat": 25,
+     "Prawns": 28
+    },
+    "kcal": 460
+   },
+   {
+    "name": "Biryani Rice",
+    "desc": "Masala-seasoned basmati rice",
+    "price": 10,
+    "kcal": 377
+   },
+   {
+    "name": "Ghee Rice",
+    "desc": "Rice sautéed and cooked with pure ghee and whole spices",
+    "price": 10,
+    "kcal": 370
+   },
+   {
+    "name": "Jeera Rice",
+    "desc": "Rice, cumin seeds, spices and herbs steamed together",
+    "price": 8,
+    "kcal": 310
+   },
+   {
+    "name": "Steam Rice",
+    "desc": "White long grain rice, steamed and served",
+    "price": 6,
+    "kcal": 210
+   }
+  ]
+ },
+ {
+  "id": "specials",
+  "name": "Special dishes",
+  "photo": "assets/img/specials.jpg",
+  "items": [
+   {
+    "name": "Shalimar Special",
+    "desc": "The tandoori chefs' special combo: chicken in a green onion gravy with cream, thickened milk and spices, and in a red tomato gravy with cheese, cream and spices, prepared the traditional way",
+    "price": 50,
+    "kcal": 622,
+    "signature": true
+   },
+   {
+    "name": "Butter Chicken",
+    "desc": "Grilled chicken, shredded and cooked in an exotic gravy with cream and butter",
+    "price": 24,
+    "kcal": 690,
+    "signature": true
+   },
+   {
+    "name": "Murg Malaiwala",
+    "desc": "Tandoori chicken cooked in a cashew-based gravy with cheese, cream and special spices",
+    "price": 28,
+    "kcal": 622
+   },
+   {
+    "name": "Kadai",
+    "desc": "A delicious, spicy and flavourful dish made with chicken or meat, onions, tomatoes, ginger, garlic and fresh ground spices",
+    "prices": {
+     "Chicken": 17,
+     "Meat": 24,
+     "Boneless": 24,
+     "Prawns": 28
+    },
+    "kcal": 505
+   },
+   {
+    "name": "Chicken Tikka Masala",
+    "desc": "The favourite spicy Indian dish of char-grilled chicken chunks in tomato gravy",
+    "price": 24,
+    "kcal": 650
+   },
+   {
+    "name": "Masala Fry",
+    "desc": "A thick gravy based on onion and tomato",
+    "prices": {
+     "Chicken": 16,
+     "Meat": 24,
+     "Boneless": 24,
+     "Prawns": 28
+    },
+    "kcal": 489
+   },
+   {
+    "name": "Delhi Kurma",
+    "desc": "A slightly sweet, creamy yogurt-based gravy seasoned with aromatic spices and dry fruits",
+    "prices": {
+     "Chicken": 22,
+     "Boneless": 28,
+     "Meat": 32
+    },
+    "kcal": 455
+   },
+   {
+    "name": "Afghani",
+    "desc": "A creamy dish with egg, onion gravy and other spices",
+    "prices": {
+     "Chicken": 22,
+     "Boneless": 28,
+     "Meat": 32
+    },
+    "kcal": 470
+   },
+   {
+    "name": "Murgh Hyderabadi",
+    "desc": "Boneless char-grilled chicken in cream, yogurt and spices on an onion gravy",
+    "price": 26,
+    "kcal": 578
+   },
+   {
+    "name": "Malwani",
+    "desc": "Boneless and minced chicken or meat in a tomato-based gravy with cream and cheese",
+    "prices": {
+     "Chicken": 24,
+     "Boneless": 30,
+     "Meat": 34
+    },
+    "kcal": 510
+   },
+   {
+    "name": "Tandoori Masala",
+    "desc": "Tandoori chicken in a thick onion and tomato gravy",
+    "price": 32,
+    "kcal": 601
+   },
+   {
+    "name": "Chettinad",
+    "desc": "Minced gravy cooked the traditional way on an onion gravy and other spices",
+    "prices": {
+     "Chicken": 22,
+     "Boneless": 28,
+     "Meat": 32,
+     "Prawns": 34
+    },
+    "kcal": 577
+   },
+   {
+    "name": "Murg Banjara",
+    "desc": "Banjara kabab cooked in a yogurt and onion based gravy",
+    "price": 28,
+    "kcal": 607
+   },
+   {
+    "name": "Bhuna Gosht",
+    "desc": "Boneless lamb in a thick gravy of onions, yogurt and spices",
+    "price": 32,
+    "kcal": 621
+   },
+   {
+    "name": "Dabba Gosht",
+    "desc": "A creamy lamb dish with egg, onion gravy and other spices",
+    "price": 32,
+    "kcal": 625
+   },
+   {
+    "name": "Murg Mumtaz",
+    "desc": "Boneless chicken cooked in a minced meat and onion gravy with cream and spices",
+    "prices": {
+     "Chicken": 35,
+     "Meat": 40
+    },
+    "kcal": 596
+   },
+   {
+    "name": "Murg Nawabi Handi",
+    "desc": "Malai tikka and minced chicken cooked in a mild, creamy cashew gravy with other spices",
+    "price": 35,
+    "kcal": 614
+   }
+  ]
+ },
+ {
+  "id": "sides",
+  "name": "Side dishes",
+  "photo": "assets/img/sides.jpg",
+  "items": [
+   {
+    "name": "Chicken 65",
+    "desc": "Indo-Chinese deep-fried boneless chicken flavoured with Schezwan sauce",
+    "price": 20,
+    "kcal": 498
+   },
+   {
+    "name": "Lollipop",
+    "desc": "Chicken winglet meat marinated in spices and sauces, then deep-fried",
+    "price": 20,
+    "kcal": 515
+   },
+   {
+    "name": "Spicy Wings",
+    "desc": "Light flour-coated chicken wings, fried with sauces and special spices",
+    "price": 18,
+    "kcal": 519
+   },
+   {
+    "name": "Ginger Chicken Honey Sauce",
+    "desc": "Deep-fried, flour-coated chicken chunks stir-fried with ginger and honey",
+    "price": 28,
+    "kcal": 515
+   },
+   {
+    "name": "Prawns 65",
+    "desc": "Indo-Chinese deep-fried prawns flavoured with Schezwan sauce",
+    "price": 35,
+    "kcal": 495
+   },
+   {
+    "name": "Golden Fry Prawns",
+    "desc": "Crispy jumbo prawns served with sauce",
+    "price": 35,
+    "kcal": 470
+   },
+   {
+    "name": "Prawns Dynamite",
+    "desc": "Indo-Chinese deep-fried prawns flavoured with Schezwan sauce",
+    "price": 35,
+    "kcal": 387
+   },
+   {
+    "name": "Samosa",
+    "desc": "Fried pastry with a savoury filling of spiced potatoes, onions and peas",
+    "price": 12,
+    "kcal": 125
+   },
+   {
+    "name": "Potato Wedges",
+    "desc": "Irregular wedge-shaped potatoes, fried and served with sauce",
+    "price": 12,
+    "kcal": 258
+   },
+   {
+    "name": "Honey Chilli Fries",
+    "desc": "French fries stir-fried with honey and chilli",
+    "price": 12,
+    "kcal": 290
+   },
+   {
+    "name": "French Fries",
+    "price": 8,
+    "kcal": 310
+   },
+   {
+    "name": "Green Salad",
+    "price": 10,
+    "kcal": 70
+   },
+   {
+    "name": "Caesar Salad",
+    "kcal": 210
+   },
+   {
+    "name": "Raitha",
+    "price": 6,
+    "kcal": 164
+   }
+  ]
+ },
+ {
+  "id": "bread",
+  "name": "Bread",
+  "photo": "assets/img/bread.jpg",
+  "items": [
+   {
+    "name": "Kerala Paratha",
+    "price": 1,
+    "kcal": 20
+   },
+   {
+    "name": "Chappathi",
+    "price": 1,
+    "kcal": 115
+   },
+   {
+    "name": "Tandoor Nan",
+    "price": 2,
+    "kcal": 143
+   },
+   {
+    "name": "Rumali Roti",
+    "price": 2,
+    "kcal": 180
+   },
+   {
+    "name": "Wheat Paratha",
+    "price": 2,
+    "kcal": 130
+   },
+   {
+    "name": "Butter Tandoor Nan",
+    "price": 3,
+    "kcal": 190
+   },
+   {
+    "name": "Garlic Nan",
+    "price": 3,
+    "kcal": 178
+   },
+   {
+    "name": "Alu Paratha",
+    "price": 5,
+    "kcal": 210
+   },
+   {
+    "name": "Cheese Nan",
+    "price": 6,
+    "kcal": 188
+   }
+  ]
+ },
+ {
+  "id": "drinks",
+  "name": "Mojitos & drinks",
+  "photo": "assets/img/drinks.jpg",
+  "items": [
+   {
+    "name": "Mojito — watermelon, pineapple, strawberry, blueberry, mint or blue curaçao",
+    "price": 12,
+    "kcal": 210
+   },
+   {
+    "name": "Passion Fruit Mojito",
+    "price": 15,
+    "kcal": 210
+   },
+   {
+    "name": "Mango Lassi",
+    "price": 10,
+    "kcal": 315
+   },
+   {
+    "name": "Lassi",
+    "price": 7,
+    "kcal": 350
+   },
+   {
+    "name": "Fresh Orange",
+    "price": 12,
+    "kcal": 180
+   },
+   {
+    "name": "Lime Soda",
+    "price": 6,
+    "kcal": 90
+   },
+   {
+    "name": "Ginger Soda",
+    "price": 6,
+    "kcal": 90
+   },
+   {
+    "name": "Lime Juice",
+    "price": 5,
+    "kcal": 120
+   },
+   {
+    "name": "Soft Drinks",
+    "price": 4,
+    "kcal": 200
+   },
+   {
+    "name": "Coffee",
+    "price": 3,
+    "kcal": 90
+   },
+   {
+    "name": "Tea",
+    "price": 2,
+    "kcal": 70
+   }
+  ]
+ }
+];
