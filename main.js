@@ -121,7 +121,7 @@
     });
   }, { rootMargin: "0px 0px -10% 0px" });
   const startReveals = () => {
-    document.querySelectorAll(".hero .fade-in").forEach((el) => el.classList.add("is-in"));
+    document.querySelectorAll(".hero .fade-in, .hero .reveal-words").forEach((el) => el.classList.add("is-in"));
     document.querySelectorAll(".reveal-words, .reveal-up, .fade-in, .reveal-fade, .card, [data-wordmark]").forEach((el) => io.observe(el));
   };
   document.querySelectorAll(".featured__grid .card").forEach((c, i) => c.style.setProperty("--d", i));
@@ -162,22 +162,6 @@
   burger.addEventListener("click", () => setOpen(!nav.classList.contains("is-open")));
   panel.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
   window.addEventListener("keydown", (e) => { if (e.key === "Escape") setOpen(false); });
-
-  /* ---------- Reservation form → WhatsApp ---------- */
-  const form = document.querySelector("[data-reserve]");
-  if (form) form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let ok = true;
-    form.querySelectorAll("input[required]").forEach((input) => {
-      const bad = !input.value.trim();
-      input.closest(".field").classList.toggle("is-error", bad);
-      if (bad && ok) { input.focus(); ok = false; }
-    });
-    if (!ok) return;
-    const d = new FormData(form);
-    const msg = `Hello Shalimar, I'd like to reserve a table.\nName: ${d.get("name")}\nPhone: ${d.get("phone")}${d.get("guests") ? `\nGuests: ${d.get("guests")}` : ""}`;
-    window.open(`https://wa.me/966549196656?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
-  });
 
   const year = document.querySelector("[data-year]");
   if (year) year.textContent = new Date().getFullYear();

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shalimarmeal.com/sitemap.xml
+Sitemap: https://restaurantshalimar.ca/sitemap.xml
