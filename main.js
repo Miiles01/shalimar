@@ -34,34 +34,11 @@
     });
   }
 
-  /* ---------- Menu ---------- */
-  const menu = window.SHALIMAR_MENU || [];
+  /* ---------- Menu (static tabs + panels, rendered in the HTML for SEO) ---------- */
   const tabsBar = document.querySelector("[data-tabs]");
-  const list = document.querySelector("[data-menu-list]");
   const photo = document.querySelector("[data-menu-photo]");
   const pill = tabsBar && tabsBar.querySelector(".t-tabs-pill");
   const swapMs = () => parseFloat(getComputedStyle(root).getPropertyValue("--duration-fast")) || 250;
-
-  const priceHtml = (item) => {
-    if (item.prices) {
-      const v = Object.entries(item.prices).map(([k, p]) => `<span><em>${k}</em> ${p}</span>`).join("");
-      return { side: "", variants: `<p class="dish__variants">${v}</p>` };
-    }
-    return { side: item.price != null ? `SAR ${item.price}` : "Ask us", variants: "" };
-  };
-
-  const renderList = (cat) => {
-    list.innerHTML = cat.items.map((item, i) => {
-      const p = priceHtml(item);
-      return `<article class="dish" style="--i:${Math.min(i, 12)}">
-        <h3 class="dish__name">${item.name}${item.signature ? '<span class="dish__tag"><span class="dot"></span>house favourite</span>' : ""}</h3>
-        <p class="dish__price">${p.side}</p>
-        ${item.desc ? `<p class="dish__desc">${item.desc}</p>` : ""}
-        ${p.variants}
-        ${item.kcal ? `<p class="dish__kcal">${item.kcal} kcal</p>` : ""}
-      </article>`;
-    }).join("");
-  };
 
   const moveTo = (tab, animate) => {
     if (!pill || !tab) return;
@@ -78,37 +55,47 @@
     }
   };
 
-  if (tabsBar && list && menu.length) {
-    const tabs = menu.map((cat, i) => {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.className = "t-tab";
-      b.setAttribute("role", "tab");
-      b.setAttribute("aria-selected", i === 0 ? "true" : "false");
-      b.textContent = cat.name;
-      tabsBar.append(b);
-      return b;
-    });
-    renderList(menu[0]);
-    photo.alt = `${menu[0].name} at Shalimar`;
-
-    tabs.forEach((tab, i) => tab.addEventListener("click", () => {
+  if (tabsBar) {
+    const tabs = [...tabsBar.querySelectorAll(".t-tab")];
+    const panelOf = (tab) => document.getElementById(tab.getAttribute("aria-controls"));
+    const select = (tab, focus) => {
       if (tab.getAttribute("aria-selected") === "true") return;
-      tabs.forEach((t) => t.setAttribute("aria-selected", t === tab ? "true" : "false"));
+      const current = tabs.find((t) => t.getAttribute("aria-selected") === "true");
+      const from = current && panelOf(current);
+      const to = panelOf(tab);
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute("aria-selected", String(on));
+        t.tabIndex = on ? 0 : -1;
+      });
+      if (focus) tab.focus();
       moveTo(tab, true);
       tab.scrollIntoView({ block: "nearest", inline: "nearest", behavior: reduce ? "auto" : "smooth" });
-      list.classList.add("is-swapping");
+      if (from) from.classList.add("is-swapping");
       photo.classList.add("is-swapping");
       setTimeout(() => {
-        renderList(menu[i]);
-        photo.src = menu[i].photo;
-        photo.alt = `${menu[i].name} at Shalimar`;
-        void list.offsetWidth;
-        list.classList.remove("is-swapping");
+        if (from) { from.hidden = true; from.classList.remove("is-swapping"); }
+        to.classList.add("is-swapping");
+        to.hidden = false;
+        photo.src = tab.dataset.photo;
+        photo.alt = `${tab.textContent} at Shalimar Restaurant`;
+        void to.offsetWidth;
+        to.classList.remove("is-swapping");
         photo.classList.remove("is-swapping");
         if (window.ScrollTrigger) window.ScrollTrigger.refresh();
       }, swapMs());
-    }));
+    };
+    tabs.forEach((tab, i) => {
+      tab.addEventListener("click", () => select(tab, false));
+      tab.addEventListener("keydown", (e) => {
+        const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+        if (e.key === "Home" || e.key === "End" || step) {
+          e.preventDefault();
+          const next = e.key === "Home" ? 0 : e.key === "End" ? tabs.length - 1 : (i + step + tabs.length) % tabs.length;
+          select(tabs[next], true);
+        }
+      });
+    });
     const active = () => tabs.find((t) => t.getAttribute("aria-selected") === "true") || tabs[0];
     requestAnimationFrame(() => moveTo(active(), false));
     window.addEventListener("resize", () => moveTo(active(), false));
@@ -233,6 +220,8 @@
         rotate: 160, ease: "none",
         scrollTrigger: { trigger: ".featured", start: "top bottom", end: "bottom top", scrub: true, invalidateOnRefresh: true },
       });
+      const ring = plate.querySelector(".featured__ring");
+      if (ring) gsap.fromTo(ring, { rotate: 0 }, { rotate: -260, ease: "none", scrollTrigger: { trigger: ".featured", start: "top bottom", end: "bottom top", scrub: true } });
     }
   };
 
