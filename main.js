@@ -224,10 +224,14 @@
       });
     }
 
-    // Plate sits in the centre cell of the glass grid and turns with the page.
+    // Plate travels down behind the glass grid and turns with the page.
     const plate = document.querySelector(".featured__plate");
     if (plate) {
-      gsap.fromTo(plate, { rotate: -60 }, { rotate: 120, ease: "none", scrollTrigger: { trigger: ".featured", start: "top bottom", end: "bottom top", scrub: true } });
+      const travel = () => document.querySelector(".featured").offsetHeight * 0.32;
+      gsap.fromTo(plate, { y: () => -travel(), rotate: -60 }, {
+        y: () => travel(), rotate: 120, ease: "none",
+        scrollTrigger: { trigger: ".featured", start: "top bottom", end: "bottom top", scrub: true, invalidateOnRefresh: true },
+      });
       const ring = plate.querySelector(".featured__ring");
       if (ring) gsap.fromTo(ring, { rotate: 0 }, { rotate: -240, ease: "none", scrollTrigger: { trigger: ".featured", start: "top bottom", end: "bottom top", scrub: true } });
     }
