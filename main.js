@@ -102,6 +102,18 @@
     document.fonts && document.fonts.ready.then(() => moveTo(active(), false));
   }
 
+  /* ---------- Featured plate: centred on the middle grid cell ---------- */
+  const centrePlate = () => {
+    const plate = document.querySelector(".featured__plate");
+    const grid = document.querySelector(".featured__grid");
+    if (!plate || !grid) return;
+    plate.style.top = `${grid.offsetTop + grid.offsetHeight / 2 - plate.offsetHeight / 2}px`;
+  };
+  centrePlate();
+  if (window.ResizeObserver) new ResizeObserver(centrePlate).observe(document.querySelector(".featured") || document.body);
+  window.addEventListener("load", centrePlate);
+  document.fonts && document.fonts.ready.then(centrePlate);
+
   /* ---------- Reveals on scroll ---------- */
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
@@ -212,16 +224,12 @@
       });
     }
 
-    // Plate travels behind the glass grid and turns with the page.
+    // Plate sits in the centre cell of the glass grid and turns with the page.
     const plate = document.querySelector(".featured__plate");
     if (plate) {
-      gsap.fromTo(plate, { y: () => -plate.offsetHeight * 0.6, rotate: -40 }, {
-        y: () => document.querySelector(".featured").offsetHeight - plate.offsetHeight * 0.4,
-        rotate: 160, ease: "none",
-        scrollTrigger: { trigger: ".featured", start: "top bottom", end: "bottom top", scrub: true, invalidateOnRefresh: true },
-      });
+      gsap.fromTo(plate, { rotate: -60 }, { rotate: 120, ease: "none", scrollTrigger: { trigger: ".featured", start: "top bottom", end: "bottom top", scrub: true } });
       const ring = plate.querySelector(".featured__ring");
-      if (ring) gsap.fromTo(ring, { rotate: 0 }, { rotate: -260, ease: "none", scrollTrigger: { trigger: ".featured", start: "top bottom", end: "bottom top", scrub: true } });
+      if (ring) gsap.fromTo(ring, { rotate: 0 }, { rotate: -240, ease: "none", scrollTrigger: { trigger: ".featured", start: "top bottom", end: "bottom top", scrub: true } });
     }
   };
 
