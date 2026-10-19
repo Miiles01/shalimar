@@ -19,7 +19,7 @@
         },
         {
           "name": "Sweet Corn Soup",
-          "desc": "An Indo-Chinese style soup made with veggies, sweet corn kernels and pepper",
+          "desc": "A warming soup made with veggies, sweet corn kernels and pepper",
           "prices": {
             "Chicken": 10,
             "Veg": 9
@@ -67,8 +67,8 @@
       ]
     },
     {
-      "id": "chinese-rice",
-      "name": "Chinese rice",
+      "id": "fried-rice",
+      "name": "Fried rice",
       "items": [
         {
           "name": "Fried Rice",
@@ -98,7 +98,7 @@
         },
         {
           "name": "1000 Rice",
-          "desc": "A generous Indo-Chinese rice combo, served with Schezwan lollipop",
+          "desc": "A generous rice combo, served with Schezwan lollipop",
           "price": 35,
           "kcal": 860,
           "ar": "أرز ١٠٠٠"
@@ -123,7 +123,7 @@
           "ar": "أرز شيزوان"
         }
       ],
-      "ar": "الأرز الصيني"
+      "ar": "الأرز المقلي"
     },
     {
       "id": "noodles",
@@ -479,7 +479,7 @@
       "items": [
         {
           "name": "Chicken 65",
-          "desc": "Indo-Chinese deep-fried boneless chicken flavoured with Schezwan sauce",
+          "desc": "Deep-fried boneless chicken flavoured with Schezwan sauce",
           "price": 20,
           "kcal": 498,
           "ar": "دجاج ٦٥"
@@ -507,7 +507,7 @@
         },
         {
           "name": "Prawns 65",
-          "desc": "Indo-Chinese deep-fried prawns flavoured with Schezwan sauce",
+          "desc": "Deep-fried prawns flavoured with Schezwan sauce",
           "price": 35,
           "kcal": 495,
           "ar": "روبيان ٦٥"
@@ -521,7 +521,7 @@
         },
         {
           "name": "Prawns Dynamite",
-          "desc": "Indo-Chinese deep-fried prawns flavoured with Schezwan sauce",
+          "desc": "Deep-fried prawns flavoured with Schezwan sauce",
           "price": 35,
           "kcal": 387,
           "ar": "روبيان ديناميت"

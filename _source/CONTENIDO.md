@@ -1,7 +1,7 @@
 # Shalimar Restaurant — contenido extraído de shalimarmeal.com (19 oct 2026)
 
 ## Datos
-- Nombre: Shalimar Restaurant (مطعم شاليمار). Cocina india y china (indo-china), desde 2014.
+- Nombre: Shalimar Restaurant (مطعم شاليمار). Cocina india (el cliente aclaró: solo india, no china), desde 2014.
 - Teléfono: 054 919 6656 (+966 54 919 6656, Arabia Saudita). Email: info@shalimarmeal.com
 - Horario: todos los días 11:00 am – 12:30 am.
 - Facebook: https://www.facebook.com/ShalimarRestaurantasu · X/Twitter: https://twitter.com/shalimarasu

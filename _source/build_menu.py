@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://shalimarmeal.com/"
 PHOTOS = {
-    "soups": "gosht", "chinese-rice": "chinese-rice", "noodles": "noodles",
+    "soups": "gosht", "fried-rice": "rice-plate", "noodles": "noodles",
     "tandoor": "tandoor", "biryani": "biryani-plate", "specials": "specials",
     "sides": "sides", "bread": "bread", "drinks": "drinks",
 }
@@ -93,14 +93,14 @@ ld = {
             "@id": SITE + "#restaurant",
             "name": "Shalimar Restaurant",
             "alternateName": "مطعم شاليمار",
-            "description": "Authentic Indian and Chinese (Indo-Chinese) cuisine at wallet-friendly prices since 2014: butter chicken, biryani, tandoor, Schezwan rice and noodles.",
+            "description": "Authentic Indian cuisine at wallet-friendly prices since 2014: butter chicken, biryani, tandoori, curries and fresh naan.",
             "url": SITE,
             "image": [SITE + "assets/img/og-image.jpg", SITE + "assets/img/platter.jpg", SITE + "assets/img/biryani.jpg"],
             "logo": SITE + "assets/img/favicon.svg",
             "telephone": "+966549196656",
             "email": "info@shalimarmeal.com",
             "foundingDate": "2014",
-            "servesCuisine": ["Indian", "Chinese", "Indo-Chinese", "Biryani", "Tandoori"],
+            "servesCuisine": ["Indian", "North Indian", "Biryani", "Tandoori", "Curry"],
             "priceRange": "SAR 1–65",
             "currenciesAccepted": "SAR",
             "acceptsReservations": True,
