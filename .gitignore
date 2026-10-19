@@ -1,3 +1,5 @@
 .DS_Store
-_source/dl/
+_source/*/dl/
+_source/**/*.html
 _source/*.html
+!_source/*/raw/*.html

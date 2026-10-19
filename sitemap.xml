@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://shalimarmeal.com/</loc>
+    <loc>https://restaurantshalimar.ca/</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <image:image><image:loc>https://shalimarmeal.com/assets/img/platter.jpg</image:loc></image:image>
-    <image:image><image:loc>https://shalimarmeal.com/assets/img/biryani.jpg</image:loc></image:image>
-    <image:image><image:loc>https://shalimarmeal.com/assets/img/lollipop.jpg</image:loc></image:image>
-    <image:image><image:loc>https://shalimarmeal.com/assets/img/chilli-chicken.jpg</image:loc></image:image>
+    <image:image><image:loc>https://restaurantshalimar.ca/assets/img/ca/hero-elephant.jpg</image:loc></image:image>
+    <image:image><image:loc>https://restaurantshalimar.ca/assets/img/ca/dining-room.jpg</image:loc></image:image>
+    <image:image><image:loc>https://restaurantshalimar.ca/assets/img/ca/butter-chicken.jpg</image:loc></image:image>
+    <image:image><image:loc>https://restaurantshalimar.ca/assets/img/ca/tandoori-platter.jpg</image:loc></image:image>
   </url>
 </urlset>
