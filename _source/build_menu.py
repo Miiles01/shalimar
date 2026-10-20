@@ -63,7 +63,7 @@ block = (
     + "\n          ".join(tabs) +
     '\n        </div>\n      </div>\n'
     '      <div class="menu__body">\n'
-    f'        <figure class="menu__photo"><img data-menu-photo src="assets/img/{PHOTOS[cats[0]["id"]]}.jpg" alt="{esc(cats[0]["name"])} at Restaurant Shalimar" width="1200" height="1200" loading="lazy"></figure>\n'
+    f'        <figure class="menu__photo reveal-img"><img data-menu-photo src="assets/img/{PHOTOS[cats[0]["id"]]}.jpg" alt="{esc(cats[0]["name"])} at Restaurant Shalimar" width="1200" height="1200" loading="lazy"></figure>\n'
     '        <div class="menu__panels">\n          '
     + "\n          ".join(panels) +
     '\n        </div>\n      </div>\n'
