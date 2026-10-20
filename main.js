@@ -12,12 +12,15 @@
     const base = Number(el.dataset.delay || 0) * 80;
     el.textContent = "";
     words.forEach((word, i) => {
+      const mask = document.createElement("span");
+      mask.className = "wm";
       const span = document.createElement("span");
       span.className = "w";
       span.style.setProperty("--i", i);
       span.style.setProperty("--base", `${base}ms`);
       span.textContent = word;
-      el.append(span, i < words.length - 1 ? " " : "");
+      mask.append(span);
+      el.append(mask, i < words.length - 1 ? " " : "");
     });
   });
 
@@ -122,7 +125,8 @@
   }, { rootMargin: "0px 0px -10% 0px" });
   const startReveals = () => {
     document.querySelectorAll(".hero .fade-in, .hero .reveal-words").forEach((el) => el.classList.add("is-in"));
-    document.querySelectorAll(".reveal-words, .reveal-up, .fade-in, .reveal-fade, .card, [data-wordmark]").forEach((el) => io.observe(el));
+    document.querySelectorAll(".hero").forEach((el) => el.classList.add("is-in"));
+    document.querySelectorAll(".reveal-words, .reveal-up, .fade-in, .reveal-fade, .reveal-img, .card, [data-wordmark], .bleed, .contact, .featured__plate").forEach((el) => io.observe(el));
   };
   document.querySelectorAll(".featured__grid .card").forEach((c, i) => c.style.setProperty("--d", i));
 
@@ -197,6 +201,19 @@
       const isHero = section.classList.contains("hero");
       gsap.fromTo(el, { yPercent: isHero ? 0 : -s * 40 }, { yPercent: s * 40, ease: "none", scrollTrigger: { trigger: section, start: isHero ? "top top" : "top bottom", end: "bottom top", scrub: true } });
     });
+    // The kitchen is pinned (CSS sticky) on tablet and desktop: its photo
+    // settles from a zoom and the copy drifts up as the section scrolls by.
+    const kitchen = document.querySelector("#kitchen");
+    const kitchenMedia = document.querySelector("[data-kitchen-media]");
+    if (kitchen && kitchenMedia) {
+      ScrollTrigger.matchMedia({
+        "(min-width: 540px)": () => {
+          gsap.fromTo(kitchenMedia, { scale: 1.25 }, { scale: 1, ease: "none", scrollTrigger: { trigger: kitchen, start: "top top", end: "bottom bottom", scrub: true } });
+          gsap.fromTo(kitchen.querySelectorAll(".bleed__eyebrow, .bleed__body, .bleed__cta"), { y: 60 }, { y: -60, ease: "none", scrollTrigger: { trigger: kitchen, start: "top top", end: "bottom bottom", scrub: true } });
+        },
+      });
+    }
+
     document.querySelectorAll(".parallax-inner").forEach((el) => {
       gsap.fromTo(el, { yPercent: -5 }, { yPercent: 5, ease: "none", scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom top", scrub: true } });
     });
@@ -216,6 +233,9 @@
   };
 
   /* ---------- Start ---------- */
+  // Reveals start at once; smooth scroll and parallax wait for the CDN scripts
+  // (deferred after this file, so they have run by DOMContentLoaded).
   startReveals();
-  initMotion();
+  // This file is deferred, so it always runs before DOMContentLoaded fires.
+  document.addEventListener("DOMContentLoaded", initMotion);
 })();
