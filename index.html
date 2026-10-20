@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="preload" href="assets/fonts/GoogleSansFlex_24pt-Light-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/img/ca/taj.jpg" as="image" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="stylesheet" href="styles.css?v=17">
   <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -759,7 +759,7 @@
         <li><a href="#combos">Combos</a></li>
         <li><a href="#find-us">Find us</a></li>
       </ul>
-      <a class="nav__cta" href="tel:+18198239683"><span class="dot" aria-hidden="true"></span>819-823-9683</a>
+      <a class="nav__cta" href="tel:+18198239683" aria-label="Reserve a table: call 819-823-9683"><span class="dot" aria-hidden="true"></span>Reserve a table</a>
       <button class="nav__burger" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu">
         <span></span><span></span>
       </button>
@@ -770,7 +770,7 @@
         <li><a href="#menu">Menu</a></li>
         <li><a href="#combos">Combos</a></li>
         <li><a href="#find-us">Find us</a></li>
-        <li><a href="tel:+18198239683"><span class="dot" aria-hidden="true"></span><strong>Call 819-823-9683</strong></a></li>
+        <li><a href="tel:+18198239683"><span class="dot" aria-hidden="true"></span><strong>Reserve a table</strong></a></li>
       </ul>
     </div>
   </header>
@@ -889,18 +889,18 @@
       <div class="menu__tabs-wrap reveal-up">
         <div class="t-tabs" role="tablist" aria-label="Menu categories" data-tabs>
           <span class="t-tabs-pill" aria-hidden="true"></span>
-          <button class="t-tab" type="button" role="tab" id="tab-combos" aria-controls="panel-combos" aria-selected="true" tabindex="0" data-photo="assets/img/ca/combo-1.jpg">Combos</button>
-          <button class="t-tab" type="button" role="tab" id="tab-starters" aria-controls="panel-starters" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/pakoras.jpg">Soups &amp; appetizers</button>
-          <button class="t-tab" type="button" role="tab" id="tab-curries" aria-controls="panel-curries" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/butter-chicken.jpg">Meat &amp; seafood</button>
-          <button class="t-tab" type="button" role="tab" id="tab-tandoori" aria-controls="panel-tandoori" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/tandoori-platter.jpg">Tandoori</button>
-          <button class="t-tab" type="button" role="tab" id="tab-vegetarian" aria-controls="panel-vegetarian" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/vegetarian.jpg">Vegetarian</button>
-          <button class="t-tab" type="button" role="tab" id="tab-biryani" aria-controls="panel-biryani" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/curry.jpg">Biryani &amp; rice</button>
-          <button class="t-tab" type="button" role="tab" id="tab-breads" aria-controls="panel-breads" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/tandoor-chef.jpg">Breads</button>
-          <button class="t-tab" type="button" role="tab" id="tab-desserts" aria-controls="panel-desserts" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/kingfisher.jpg">Desserts &amp; drinks</button>
+          <button class="t-tab" type="button" role="tab" id="tab-combos" aria-controls="panel-combos" aria-selected="true" tabindex="0" data-photo="assets/img/ca/menu-combos.jpg">Combos</button>
+          <button class="t-tab" type="button" role="tab" id="tab-starters" aria-controls="panel-starters" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/menu-starters.jpg">Soups &amp; appetizers</button>
+          <button class="t-tab" type="button" role="tab" id="tab-curries" aria-controls="panel-curries" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/menu-curries.jpg">Meat &amp; seafood</button>
+          <button class="t-tab" type="button" role="tab" id="tab-tandoori" aria-controls="panel-tandoori" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/menu-tandoori.jpg">Tandoori</button>
+          <button class="t-tab" type="button" role="tab" id="tab-vegetarian" aria-controls="panel-vegetarian" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/menu-vegetarian.jpg">Vegetarian</button>
+          <button class="t-tab" type="button" role="tab" id="tab-biryani" aria-controls="panel-biryani" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/menu-biryani.jpg">Biryani &amp; rice</button>
+          <button class="t-tab" type="button" role="tab" id="tab-breads" aria-controls="panel-breads" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/menu-tandoori.jpg">Breads</button>
+          <button class="t-tab" type="button" role="tab" id="tab-desserts" aria-controls="panel-desserts" aria-selected="false" tabindex="-1" data-photo="assets/img/ca/menu-drinks.jpg">Desserts &amp; drinks</button>
         </div>
       </div>
       <div class="menu__body">
-        <figure class="menu__photo"><img data-menu-photo src="assets/img/ca/combo-1.jpg" alt="Combos at Restaurant Shalimar" width="340" height="300" loading="lazy"></figure>
+        <figure class="menu__photo"><img data-menu-photo src="assets/img/ca/menu-combos.jpg" alt="Combos at Restaurant Shalimar" width="1200" height="1200" loading="lazy"></figure>
         <div class="menu__panels">
           <div class="menu__list" role="tabpanel" id="panel-combos" aria-labelledby="tab-combos" tabindex="0" data-panel>
             <h3 class="menu__cat"><span>Combos</span><span class="menu__cat-hi" lang="hi">कॉम्बो</span></h3>
@@ -1063,6 +1063,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
-  <script src="main.js?v=15" defer></script>
+  <script src="main.js?v=17" defer></script>
 </body>
 </html>
