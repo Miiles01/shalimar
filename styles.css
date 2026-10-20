@@ -283,7 +283,7 @@ main { overflow-x: clip; }
 .t-tab[aria-selected="true"] { color: var(--raw-white); }
 .t-tabs-pill { position: absolute; top: 3px; left: 0; height: 2.5rem; width: 0; background: var(--tabs-pill-bg); border-radius: 48px; transform: translateX(0); transition: transform var(--tabs-dur) var(--tabs-ease), width var(--tabs-dur) var(--tabs-ease); will-change: transform, width; z-index: 0; pointer-events: none; }
 .menu__body { display: grid; gap: 2rem; margin-top: 2rem; }
-.menu__photo { position: relative; overflow: hidden; aspect-ratio: 730 / 350; border-radius: var(--radius-card); background: var(--surface-muted); }
+.menu__photo { position: relative; overflow: hidden; aspect-ratio: 4 / 3; border-radius: var(--radius-card); background: #fff; }
 .menu__photo img { width: 100%; height: 100%; object-fit: cover; transition: opacity var(--duration-fast) var(--ease-in-out), filter var(--duration-fast) var(--ease-in-out); }
 .menu__photo img.is-swapping { opacity: 0; filter: blur(var(--blur-small)); }
 .menu__list { display: grid; }
@@ -447,7 +447,7 @@ main { overflow-x: clip; }
   .menu__title > span { display: block; }
   .menu__tabs-wrap { margin: 3rem 0 0; padding: 0; overflow: visible; }
   .menu__body { grid-column: 1 / -1; grid-template-columns: 35.125rem 1fr; column-gap: 6rem; margin-top: 3rem; align-items: start; }
-  .menu__photo { position: sticky; top: 6rem; aspect-ratio: 730 / 520; }
+  .menu__photo { position: sticky; top: 6rem; aspect-ratio: 1 / 1; }
 
   .reviews { padding: 0 2.5rem 6.25rem; }
   .reviews__grid { grid-template-columns: repeat(4, 1fr); }

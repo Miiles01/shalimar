@@ -12,9 +12,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://restaurantshalimar.ca/"
 PHOTOS = {
-    "combos": "ca/combo-1", "starters": "ca/pakoras", "curries": "ca/butter-chicken",
-    "tandoori": "ca/tandoori-platter", "vegetarian": "ca/vegetarian", "biryani": "ca/curry",
-    "breads": "ca/tandoor-chef", "desserts": "ca/kingfisher",
+    "combos": "ca/menu-combos", "starters": "ca/menu-starters", "curries": "ca/menu-curries",
+    "tandoori": "ca/menu-tandoori", "vegetarian": "ca/menu-vegetarian", "biryani": "ca/menu-biryani",
+    "breads": "ca/menu-tandoori", "desserts": "ca/menu-drinks",
 }
 
 data = json.loads((ROOT / "_source/menu.json").read_text())
@@ -63,7 +63,7 @@ block = (
     + "\n          ".join(tabs) +
     '\n        </div>\n      </div>\n'
     '      <div class="menu__body">\n'
-    f'        <figure class="menu__photo"><img data-menu-photo src="assets/img/{PHOTOS[cats[0]["id"]]}.jpg" alt="{esc(cats[0]["name"])} at Restaurant Shalimar" width="340" height="300" loading="lazy"></figure>\n'
+    f'        <figure class="menu__photo"><img data-menu-photo src="assets/img/{PHOTOS[cats[0]["id"]]}.jpg" alt="{esc(cats[0]["name"])} at Restaurant Shalimar" width="1200" height="1200" loading="lazy"></figure>\n'
     '        <div class="menu__panels">\n          '
     + "\n          ".join(panels) +
     '\n        </div>\n      </div>\n'

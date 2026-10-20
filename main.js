@@ -201,12 +201,6 @@
       gsap.fromTo(el, { yPercent: -5 }, { yPercent: 5, ease: "none", scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom top", scrub: true } });
     });
 
-    // Wordmark: alternating letters climb at different rates.
-    if (wordmark) {
-      wordmark.querySelectorAll(".l").forEach((l, i) => {
-        gsap.to(l, { y: () => (i % 2 ? -0.16 : -0.06) * l.offsetHeight, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
-      });
-    }
 
     // Plate travels down behind the glass grid and turns with the page.
     const plate = document.querySelector(".featured__plate");
